@@ -1,29 +1,16 @@
-// var React = require('react');
-import React from 'react';
-// var ReactDom = require('react-dom');
-import ReactDom from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-// preferred method of wrapping adjacent elements(better than methods explored in previous branch)
-
-// ReactDom.render(
-//     <React.Fragment>
-//         <h1>Hello World</h1>
-//         <h2>Mayank Singh Chouhan</h2>
-//         <p>Can render any number of elements this way</p>
-//     </React.Fragment>,
-
-//     document.getElementById('root')
-// ); 
-
-
-// syntactic sugar(for react fragment)
-
-ReactDom.render(
+ReactDOM.render(
     <>
-        <h1>Hello World</h1>
-        <h2>Mayank Singh Chouhan</h2>
-        <p>Can render any number of elements this way</p>
-    </>,
-
-    document.getElementById('root')
-); 
+        <h1>Mayank Singh Chouhan Netflix Pick</h1>
+        <p>List of 5 Best Series.</p>
+        <ol>
+            <li>Dark</li>
+            <li>Extra Curricular</li>
+            <li>My Holo Love</li>
+            <li>My first-2 love</li>
+            <li>Mr Robot</li>
+        </ol>
+    </>, document.getElementById("root")
+);
