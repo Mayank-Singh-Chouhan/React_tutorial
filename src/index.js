@@ -2,26 +2,43 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Card from "./Cards";
 import "./index.css";
+import Sdata from "./Sdata";
+
+// console.log(Sdata[0].sname);
 
 ReactDOM.render(
     <>
+        <h1 className="heading_style">List Of Top 5 Netflix Series In 2020</h1>
+
         <Card
-            imgsrc="https://wallpapercave.com/wp/wp4056410.jpg"
-            title="A Netflix Original Series"
-            sname="DARK"
-            link="https://www.netflix.com/in/title/80100172"
+            imgsrc={Sdata[0].imgsrc}
+            title={Sdata[0].title}
+            sname={Sdata[0].sname}
+            link={Sdata[0].link}
         />
         <Card
-            imgsrc="https://i.pinimg.com/originals/9f/45/88/9f4588f879aa9781cbb77e93c6cef20a.jpg"
-            title="A Netflix Original Series"
-            sname="Extracurricular"
-            link="https://www.netflix.com/in/title/80990668"
+            imgsrc={Sdata[1].imgsrc}
+            title={Sdata[1].title}
+            sname={Sdata[1].sname}
+            link={Sdata[1].link}
         />
         <Card
-            imgsrc="https://wallpapercave.com/wp/wp1917154.jpg"
-            title="A Netflix Original Series"
-            sname="Stranger Things"
-            link="https://www.netflix.com/in/title/80057281"
+            imgsrc={Sdata[2].imgsrc}
+            title={Sdata[2].title}
+            sname={Sdata[2].sname}
+            link={Sdata[2].link}
+        />
+        <Card
+            imgsrc={Sdata[3].imgsrc}
+            title={Sdata[3].title}
+            sname={Sdata[3].sname}
+            link={Sdata[3].link}
+        />
+        <Card
+            imgsrc={Sdata[4].imgsrc}
+            title={Sdata[4].title}
+            sname={Sdata[4].sname}
+            link={Sdata[4].link}
         />
 
     </>, document.getElementById("root")
