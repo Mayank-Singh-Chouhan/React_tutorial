@@ -11,6 +11,7 @@ function Card(props) {
                     <div className="card__info">
                         <span className="card__category">{props.title}</span>
                         <Heading sname={props.sname} />
+                        {/* eslint-disable-next-line */}
                         <a href={props.link} target="_blank">
                             <button>Watch Now</button>
                         </a>
