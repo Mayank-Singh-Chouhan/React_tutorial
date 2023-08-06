@@ -1,22 +1,24 @@
-import React from "react";
-import SlotM from "./SlotMach";
+import React, { useState } from "react";
 
 const App = () => {
+    // const state = useState();
+    // console.log(state);
+
+    const [count, setCount] = useState(0);
+
+    const IncNum = () => {
+        setCount(count + 1);
+    }
+
+    const DecNum = () => {
+        setCount(count - 1);
+    }
+
     return (
         <>
-            <h1 className="heading_style">
-                🎰 Welcome to <span style={{ fontWeight: "bold" }}>Sloth Machine Game</span> 🎰
-            </h1>
-
-            <div className="slotmachine">
-                <SlotM x="😊" y="😊" z="😊" />
-                <hr />
-                <SlotM x="😊" y="🤣" z="😊" />
-                <hr />
-                <SlotM x="🍎" y="🍌" z="🍎" />
-                <hr />
-                <SlotM x="👨‍❤️‍💋‍👨" y="👨‍❤️‍💋‍👨" z="👨‍❤️‍💋‍👨" />
-            </div>
+            <h1> {count} </h1>
+            <button onClick={IncNum}> Click Me for +1 </button>
+            <button onClick={DecNum}> Click Me for -1</button>
         </>
     );
 }
