@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     background-color: #d2dbdd;
+    font-family: "josefin Sans", "Arial Narrow", Arial, sans-serif;
 }
 
 div {
@@ -23,8 +24,18 @@ h1 {
     text-shadow: 0 2px 2px black;
 }
 
+input {
+    width: 50%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
 button {
-    padding: 12px 20px;
+    line-height: 24px;
+    padding: 0px 20px;
     background: transparent;
     color: white;
     border: 2px solid #ecf0f1;
