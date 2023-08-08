@@ -2,23 +2,39 @@ import React, { useState } from "react";
 
 const App = () => {
     const [name, setName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [fullName, setFullName] = useState("");
+    const [lastNameNew, setLastNameNew] = useState("");
 
     const inputEvent = (event) => {
         // console.log(event.target.value);
         setName(event.target.value);
     }
 
-    const onSubmit = () => {
+    const inputEventTwo = (event) => {
+        setLastName(event.target.value);
+    }
+
+    const onSubmit = (event) => {
+        event.preventDefault();
         setFullName(name);
+        setLastNameNew(lastName);
     }
 
     return (
         <>
-            <div>
-                <h1> Hello {fullName} </h1>
-                <input type="text" placeholder="Enter Your Name" onChange={inputEvent} value={name} />
-                <button onClick={onSubmit}>Click Me 👍</button>
+            <div className="main_div">
+                <form onSubmit={onSubmit}>
+
+                    <div>
+                        <h1> Hello {fullName} {lastNameNew} </h1>
+                        <input type="text" placeholder="Enter Your Name" onChange={inputEvent} value={name} />
+                        <br />
+                        <input type="text" placeholder="Enter Your Last Name" onChange={inputEventTwo} value={lastName} />
+                        <button type="submit"> Submit Me 👍</button>
+                    </div>
+
+                </form>
             </div>
         </>
     );
