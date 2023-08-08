@@ -24,6 +24,12 @@ h1 {
     text-shadow: 0 2px 2px black;
 }
 
+p {
+    color: white;
+    background: transparent;
+    text-shadow: 0 2px 2px black;
+}
+
 input {
     width: 500px;
     padding: 15px 20px;
