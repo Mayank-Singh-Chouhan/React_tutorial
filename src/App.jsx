@@ -1,49 +1,35 @@
 import React, { useState } from "react";
-import ToDoList from "./ToDoList";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 const App = () => {
-    const [inputList, setInputList] = useState("");
-    const [items, setItems] = useState([]);
+    const [num, setNum] = useState(0);
 
-    const itemEvent = (event) => {
-        setInputList(event.target.value);
+    const incNum = () => {
+        setNum(num + 1);
     }
 
-    const listOfItems = () => {
-        setItems((oldItems) => {
-            return [...oldItems, inputList]
-        });
-        setInputList("");
-    }
-
-    const deleteItems = (id) => {
-        setItems((oldItems) => {
-            return oldItems.filter((arrElem, index) => {
-                return index !== id;
-            });
-        });
+    const decNum = () => {
+        if (num > 0) {
+            setNum(num - 1);
+        } else {
+            alert("Sorry, Zero Limit Reached");
+            setNum(0);
+        }
     }
 
     return (
         <>
             <div className="main_div">
                 <div className="center_div">
-                    <br />
-                    <h1>ToDo List</h1>
-                    <br />
-                    <input type="text" value={inputList} placeholder="Add a task" onChange={itemEvent} />
-                    <button onClick={listOfItems}>+</button>
-
-                    <ol>
-                        {items.map((itemval, index) => {
-                            return <ToDoList
-                                key={index}
-                                text={itemval}
-                                id={index}
-                                onSelect={deleteItems}
-                            />;
-                        })}
-                    </ol>
+                    <h1>{num}</h1>
+                    <div className="btn_div"></div>
+                    <button onClick={incNum}>
+                        <AddIcon />
+                    </button>
+                    <button onClick={decNum}>
+                        <RemoveIcon />
+                    </button>
                 </div>
             </div>
         </>
