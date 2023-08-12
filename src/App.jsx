@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 
 const App = () => {
     const [num, setNum] = useState(0);
@@ -22,14 +24,24 @@ const App = () => {
         <>
             <div className="main_div">
                 <div className="center_div">
+
                     <h1>{num}</h1>
-                    <div className="btn_div"></div>
-                    <button onClick={incNum}>
-                        <AddIcon />
-                    </button>
-                    <button onClick={decNum}>
-                        <RemoveIcon />
-                    </button>
+
+                    <div className="btn_div">
+
+                        <Tooltip title="Add">
+                            <Button onClick={incNum} className="btn_green">
+                                <AddIcon />
+                            </Button>
+                        </Tooltip>
+
+                        <Tooltip title="Delete">
+                            <Button onClick={decNum} className="btn_red">
+                                <DeleteRoundedIcon />
+                            </Button>
+                        </Tooltip>
+
+                    </div>
                 </div>
             </div>
         </>
