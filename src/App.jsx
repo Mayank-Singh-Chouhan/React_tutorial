@@ -4,6 +4,8 @@ import ComA from "./ComA";
 const FirstName = createContext();
 const LastName = createContext();
 
+console.log(FirstName);
+
 const App = () => {
     return (
         <>
