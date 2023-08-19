@@ -1,22 +1,15 @@
-import React, { createContext } from 'react';
-import ComA from "./ComA";
-
-const FirstName = createContext();
-const LastName = createContext();
-
-console.log(FirstName);
+import React from "react";
+import Counter1 from "./Counter1";
+import Counter2 from "./Counter2";
 
 const App = () => {
+
     return (
         <>
-            <FirstName.Provider value={"Mayank"}>
-                <LastName.Provider value={"Couhan"}>
-                    <ComA />
-                </LastName.Provider>
-            </FirstName.Provider>
+            <Counter1 />
+            <Counter2 />
         </>
     );
 }
 
 export default App;
-export { FirstName, LastName };
